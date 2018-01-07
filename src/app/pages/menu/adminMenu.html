@@ -1,0 +1,23 @@
+
+<aside class="page-sidebar col-md-2 col-sm-4 affix-top">
+	<section class="widget">
+		<ul class="nav">
+	    	<li class="{{adminDemand}}"><a href="#/admin/adminDemand?adminDemand=active" i18n="@@registrationRequest">Demandes Inscription</a></li>
+ 			<li class="{{adminMain}}"><a href="#/admin/adminMain?adminMain=active" i18n="@@statistics">Statistiques</a></li>
+			<li *ngIf="loggedInUser.role==1" class="{{information}}"><a href="#/admin/information?information=active" i18n="@@information">Information</a></li>	
+			<li class="{{adminLibrary}}"><a href="#/admin/adminLibrary?adminLibrary=active" i18n="@@library">Inventaire</a></li>		
+			<li *ngIf="loggedInUser.role==1" class="{{adminCourse}}"><a href="#/admin/adminCourse?adminCourse=active" i18n="@@course">Cours</a></li> 
+			<li *ngIf="loggedInUser.role==1" class="{{adminSchedule}}"><a href="#/admin/adminSchedule?adminSchedule=active" i18n="@@schedule">Programme de cours</a></li> 
+			<li class="{{adminExam}}"><a href="#/admin/adminExam?adminExam=active" i18n="@@examAndMarks">Examens et notes</a></li>
+			<li class="{{adminApproval}}"><a href="#/admin/adminApproval?adminApproval=active" i18n="@@testimonies">Temoignages</a></li>
+			<li class="{{adminTeacher}}"><a href="#/admin/adminTeacher?adminTeacher=active" i18n="@@teachers">Enseignants</a></li>
+			<li class="{{adminStudent}}"><a href="#/admin/adminStudent?adminStudent=active" i18n="@@students">Etudiants</a></li>
+			<li class="{{adminParent}}"><a href="#/admin/adminParent?adminParent=active" i18n="@@parents">Parents</a></li>
+			<li class="{{adminProfile}}"><a href="#/admin/adminProfile?adminProfile=active" i18n="@@myProfile">Mon Profile</a></li>
+			<li class="{{adminReport}}"><a href="#/admin/adminReport?adminReport=active" i18n="@@reports">Bulletins et Etats</a></li>
+			<li *ngIf="loggedInUser.role==1" class="{{adminYearInfo}}"><a href="#/admin/adminYearInfo?adminYearInfo=active" i18n="@@configuration">Configuration</a></li>
+			
+			</ul>
+	</section>
+	<!--//widget-->
+</aside>

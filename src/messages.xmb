@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE messagebundle [
+<!ELEMENT messagebundle (msg)*>
+<!ATTLIST messagebundle class CDATA #IMPLIED>
+
+<!ELEMENT msg (#PCDATA|ph|source)*>
+<!ATTLIST msg id CDATA #IMPLIED>
+<!ATTLIST msg seq CDATA #IMPLIED>
+<!ATTLIST msg name CDATA #IMPLIED>
+<!ATTLIST msg desc CDATA #IMPLIED>
+<!ATTLIST msg meaning CDATA #IMPLIED>
+<!ATTLIST msg obsolete (obsolete) #IMPLIED>
+<!ATTLIST msg xml:space (default|preserve) "default">
+<!ATTLIST msg is_hidden CDATA #IMPLIED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<messagebundle>
+  <msg id="homeLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Accueil</msg>
+  <msg id="teamLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Notre Equipe</msg>
+  <msg id="contactLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Contact</msg>
+  <msg id="tourLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Visite guidee</msg>
+  <msg id="faqLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>FAQ</msg>
+  <msg id="loginLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Connexion</msg>
+  <msg id="logoutLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Deconnexion</msg>
+  <msg id="admissionLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Admission</msg>
+  <msg id="howToRegisterLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Procedure d'inscription</msg>
+  <msg id="onlineRegistrationLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Incription en ligne</msg>
+  <msg id="academicProgramLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Program d'Etude</msg>
+  <msg id="coursesLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Cours</msg>
+  <msg id="newsLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Actualites</msg>
+  <msg id="calendarLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Calendrier</msg>
+  <msg id="espaceAdminLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Espace Admin</msg>
+  <msg id="espaceTeacherLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Espace Enseignant</msg>
+  <msg id="espaceStudentLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Espace Etudiant</msg>
+  <msg id="espaceParentLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Espace Parent</msg>
+  <msg id="contactUsLink"><source>C:/Development/ipnetunivui/src/app/app.component.ts:32</source>Contactez-nous</msg>
+  
+</messagebundle>

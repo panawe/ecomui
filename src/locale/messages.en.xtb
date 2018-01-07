@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE translationbundle [
+<!ELEMENT translationbundle (translation)*>
+<!ATTLIST translationbundle lang CDATA #REQUIRED>
+
+<!ELEMENT translation (#PCDATA|ph)*>
+<!ATTLIST translation id CDATA #REQUIRED>
+<!ATTLIST translation desc CDATA #IMPLIED>
+<!ATTLIST translation meaning CDATA #IMPLIED>
+<!ATTLIST translation xml:space (default|preserve) "default">
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<translationbundle lang="en">
+
+	<!-- Add app.component.html   -->
+  <translation id="homeLink">Home</translation>
+  <translation id="teamLink">Our Team</translation>
+  <translation id="contactLink">Contact</translation>
+  <translation id="tourLink">Campus Tour</translation>
+  <translation id="faqLink">FAQ</translation>
+  <translation id="loginLink">Login</translation>
+  <translation id="logoutLink">Logout</translation>
+  <translation id="admissionLink">Admission</translation>
+  <translation id="howToRegisterLink">How To Register</translation>
+  <translation id="onlineRegistrationLink">Online Registration</translation>
+  <translation id="academicProgramLink">Academic Program &lt;i class="fa fa-angle-down"&gt;&lt;/i&gt;</translation>
+  <translation id="coursesLink">Courses</translation>
+  <translation id="collegeLink">College</translation>
+  <translation id="newsLink">News</translation>
+  <translation id="calendarLink">Calender</translation>
+  <translation id="espaceAdminLink">Admin Space</translation>
+  <translation id="espaceTeacherLink">Teacher Space</translation>
+  <translation id="espaceStudentLink">Student Space</translation>	
+  <translation id="espaceParentLink">Parent Space</translation>
+  <translation id="contactUsLink">Contact-Us</translation>
+  <translation id="securityInfoAudit">Audit of the Security of Information Systems</translation>
+  
+  	<!-- Add home.html		-->
+  <translation id="slideTitle1_1">ADEQUATION TRAINING-EMPLOYMENT</translation>	
+  <translation id="slideTitle1_2">Education in line with the labor market and self-employment</translation>	
+  <translation id="slideTitle2_1">CHOOSE ScoolDay College</translation>	
+  <translation id="slideTitle2_2">Highly Qualified Teachers</translation>	
+  <translation id="slideTitle3_1">Library and Labs of ScoolDay College</translation>	
+  <translation id="slideTitle3_2">Laboratories and libraries very well equipped to ensure your success</translation>
+  <translation id="whyChoose_1">Why choose ScoolDay College?</translation>
+  <translation id="whyChoose_2">Qualified and experienced teachers; Educational programs in line with the labor market and self-employment; Of the laboratories of last generation for the courses and the training of the students outside the hours of course.</translation>
+  <translation id="onlineRegistrationButton">&lt;i class="fa fa-play-circle"&gt;&lt;/i&gt;Online Registration</translation>
+  <translation id="usefulLink">Useful Links</translation>
+  <translation id="teamLinkWith_i">&lt;i class="fa fa-caret-right"&gt;&lt;/i&gt;Our Team</translation>
+  <translation id="coursesLinkWith_i">&lt;i class="fa fa-caret-right"&gt;&lt;/i&gt;Courses</translation>
+  <translation id="onlineRegistrationLinkWith_i">&lt;i class="fa fa-caret-right"&gt;&lt;/i&gt;Online Registration</translation>
+  <translation id="contactLinkWith_i">&lt;i class="fa fa-caret-right"&gt;&lt;/i&gt;Contact</translation>
+  <translation id="brochureLinkWith_i">&lt;i class="fa fa-download"&gt;&lt;/i&gt;Download our brochure</translation>
+  
+  	<!-- Add howToRegister.html   -->
+  <translation id="registrationProcedure">Registration process</translation>
+  <translation id="youAreHere">You are here:</translation>
+  <translation id="registrationText">Would you like to study at ScoolDay College? You are in the right place to start the steps towards an admission! The registration is in 4 simple steps:</translation>
+  <translation id="registrationStep_N">N</translation>
+  <translation id="registrationStep_V">Step</translation>
+  <translation id="registrationStep_V_Row1">&lt;i class="fa fa-play-circle"&gt;&lt;/i&gt; Submit your application online.</translation>
+  <translation id="registrationStep_V_Row2">&lt;i class="fa fa-play-circle"&gt;&lt;/i&gt; Our educational team analyzes your request and notifies you of the result by e-mail or telephone</translation>
+  <translation id="registrationStep_V_Row3">&lt;i class="fa fa-play-circle"&gt;&lt;/i&gt; Also, follow the evolution of your request by logging in online.</translation>
+  <translation id="registrationStep_V_Row4">&lt;i class="fa fa-play-circle"&gt;&lt;/i&gt; As soon as you are pre-approved, bring the originals and copies of your diplomas as well as the registration fees on campus for the final registration.</translation>
+
+   <!--  Add onlineRegistration.html   -->
+  <translation id="lastName">Last Name:</translation>
+  <translation id="lastNameRequired">Last Name Required</translation>
+  <translation id="firstName">First Name:</translation>
+  <translation id="firstNameRequired">First Name Required</translation>
+  <translation id="email">E-mail:</translation>
+  <translation id="emailRequired">E-mail Required</translation>
+  <translation id="userNameOrEmail">Username or email</translation>
+  <translation id="userNameOrEmailRequired">Username or email Required</translation>
+  <translation id="password">Password:</translation>
+  <translation id="passwordRequired">Password Required</translation>
+  <translation id="birthDate">Date Of Birth:</translation>
+  <translation id="birthDateRequired">Date Of Birth Required</translation>
+  <translation id="originCountry">Birth Country:</translation>
+  <translation id="Iam">I am:</translation>
+  <translation id="address">Address:</translation>
+  <translation id="addressRequired">Address Required</translation>
+  <translation id="zipCode">Zip Code:</translation>
+  <translation id="cityResidence">City Of Residence:</translation>
+  <translation id="cityResidenceRequired">City Of Residence Required:</translation>
+  <translation id="city">City:</translation>
+  <translation id="countryResidence">Country Of Residence:</translation>
+  <translation id="countryResidenceRequired">Country Of Residence Required:</translation>
+  <translation id="phone">Phone:</translation>
+  <translation id="phoneRequired">Phone Required</translation>
+  <translation id="lastDiploma">What is your last Diploma?</translation>
+  <translation id="levelChoice">Which program would you like to register?</translation>
+  <translation id="schoolYearChoice">For Which school year will you enroll?</translation>
+  <translation id="otherInformation">Other Information</translation>
+  
+  <!--  Add collegeSingle.html    -->
+  <translation id="levelLink">Department</translation>
+  <translation id="beginAvailability">Availability:</translation>
+  <translation id="duration">Duration:</translation>
+  <translation id="years">years</translation>
+  <translation id="numberOfCredits">Number Of Credits:</translation>
+  <translation id="theCourses">Courses</translation>
+  <translation id="fees">Fees</translation>
+  <translation id="admissionRquirements">Admission Requirements</translation>
+  <translation id="followingCourses">The following courses are taught in this course.</translation>
+  <translation id="courseDetails">View Course Details &lt;i class="fa fa-chevron-right" style="background: transparent"&gt;&lt;/i&gt;</translation>
+  <translation id="ourLevels">Our departments</translation>
+  <translation id="level">Department:</translation>
+  <translation id="detailOfCourses">Details of Course</translation>
+  <translation id="chooseLevel">Choose your department</translation>
+  
+  <!--  Add news.html   -->
+  <translation id="news">News</translation>
+  <translation id="readMore">Read More &lt;i class="fa fa-chevron-right"&gt;&lt;/i&gt;</translation>
+  
+  <!--  Add events.html   -->
+  <translation id="events">Events</translation>
+  
+  <!--  Add contact.html  -->
+  <translation id="youHaveQuestionForUs">You have questions? We are delighted to answer</translation>
+  <translation id="message">Message</translation>
+  <translation id="submit">Submit</translation>
+  <translation id="howToFindUs">How To Find Us</translation>
+  
+  <!--  Add prospectus.html   -->
+  <translation id="whyChooseUs">Why choose Us?</translation>
+  <translation id="forOurQuality">&lt;i class="fa fa-caret-right"&gt;&lt;/i&gt; By their quality and diversity, the programs of ScoolDay College:</translation>
+  <translation id="forYourNeed">&lt;i class="fa fa-caret-right"&gt;&lt;/i&gt; Meet your needs for knowledge, know-how and know-how</translation>
+  <translation id="forYourKnowledge">&lt;i class="fa fa-caret-right"&gt;&lt;/i&gt; Develop your knowledge and skills</translation>
+  <translation id="forYourPreparation">&lt;i class="fa fa-caret-right"&gt;&lt;/i&gt; Prepare you to meet the challenges of the labor market and the world around you.</translation>
+  
+  <!--  Add suscribe.html  -->
+  <translation id="subscribeToOurNews">Subscribe to our news</translation>
+  <translation id="toHaveOurLatestNews">Subscribe for the latest news</translation>
+  
+   <!--  Add adminAcademic.html  -->
+  <translation id="adminSpace">Administration Space</translation>
+  <translation id="admin">Admin</translation>
+  <translation id="parent">Parent</translation>
+  <translation id="parents">Parents</translation>
+  <translation id="training">Training</translation>
+  <translation id="trainingCalendar">Training Calendar</translation>
+  <translation id="youNeedToBeConnectedAsAdmin">You Must be logged in as an administrator to view this content</translation>
+  <translation id="youNeedToBeConnectedAsParent">You Must be logged in as a parent to view this content</translation>
+  <translation id="youNeedToBeConnectedAsStudent">You Must be logged in as a student to view this content</translation>
+  <translation id="youNeedToBeConnectedAsTeacher">You Must be logged in as a teacher to view this content</translation>
+  <translation id="information">Information</translation>
+  
+  <!--  Add admin*.html  -->
+  <translation id="description">Description</translation>
+  <translation id="courseDescription">Course Description</translation>
+  <translation id="courseObjective">Course Objective</translation>
+  <translation id="beginDate">Begin Date</translation>
+  <translation id="endDate">End Date</translation>
+  <translation id="subject">Subject</translation>
+  <translation id="subjectRequired">Subject Required</translation>
+  <translation id="active">Active</translation>
+  <translation id="certification">Certification</translation>
+  <translation id="certificationRequired">Certification Required</translation>
+  <translation id="fullProfessor">Full Professor</translation>
+  <translation id="name">Name</translation>
+  <translation id="nameRequired">Name Required</translation>
+  <translation id="capacity">Capacity</translation>
+  <translation id="capacityRequired">Capacity Required</translation>
+  <translation id="credits">Credits</translation>
+  <translation id="creditsRequired">Credits Required</translation>
+  <translation id="admissionConditions">Admission Condition</translation>
+  <translation id="value">Value</translation>
+  <translation id="applications">Applications</translation>
+  <translation id="start">Start</translation>
+  <translation id="end">End</translation>
+  <translation id="title">Title</translation>
+  <translation id="examAndMarks">Exam And Marks</translation>
+  <translation id="examDate">Exam Date</translation>
+  <translation id="examType">Exam Type</translation>
+  <translation id="examTypeRequired">Exam Type Required</translation>
+  <translation id="quater">Quater</translation>
+  <translation id="quaterRequired">Quater Required</translation>
+  <translation id="maxMark">Max Mark</translation>
+  <translation id="maxMarkRequired">Max Mark Required</translation>
+  <translation id="ratio">Ratio</translation>
+  <translation id="publish">Publish</translation>
+  <translation id="publishBy">Publish By:</translation>
+  <translation id="postOn">Post On:</translation>
+  <translation id="levelRequired">Department Required</translation>
+  <translation id="openDate">Open Date</translation>
+  <translation id="requirements">Requirements</translation>
+  <translation id="showOnReport">Show On Report</translation>
+  <translation id="statistics">Statistics</translation>
+  <translation id="date">Date</translation>
+  <translation id="author">Author</translation>
+  <translation id="thePayments">Payments</translation>
+   <translation id="theDocuments">Documents</translation>
+  <translation id="report">Report</translation>
+  <translation id="reports">Reports</translation>
+  <translation id="violation">Violation</translation>
+  <translation id="violationRequired">Violation Required</translation>
+  <translation id="comments">Comments</translation>    
+  <translation id="code">Code</translation>    
+  <translation id="exam">Exam</translation>    
+  <translation id="objectives">Objectives</translation>    
+  <translation id="lastQuater">Last Quater?</translation>    
+  <translation id="teacher">Teacher</translation>    
+  <translation id="teachers">Teachers</translation>   
+  <translation id="teacherRequired">Teacher Required</translation>    
+  <translation id="tuitionType">Tuition Type</translation>    
+  <translation id="tuitionTypeRequired">Tuition Type Required</translation>    
+  <translation id="dueDate">Due Date</translation>    
+  <translation id="remindDate">Remind Date</translation>    
+  <translation id="listOfChildren">Children</translation>   
+  <translation id="parentType">Parent Type</translation>   
+  <translation id="link">Link</translation>   
+  <translation id="yearInformation">Year Information</translation>
+  <translation id="audit">Audit</translation>
+  <translation id="group">Group</translation>
+  <translation id="cost">Cost</translation>
+  <translation id="leftToPay">Left To Pay</translation>
+  <translation id="amount">Amount</translation>
+  <translation id="over">Over</translation>
+  <translation id="student">Student</translation>
+  <translation id="students">Students</translation>
+  <translation id="departmentClass">Department/Class</translation>
+  <translation id="currentLevel">Current Level/Class</translation>
+  <translation id="frequentlyAskedQuestions">Frequently asked questions</translation>
+  <translation id="profession">Profession</translation>
+  <translation id="professionRequired">Profession Required</translation>
+  <translation id="company">Company</translation>
+  <translation id="companyRequired">Company Required</translation>
+  <translation id="status">Status:</translation>
+  <translation id="registrationDate">Registration Date:</translation>
+  <translation id="matricule">Matricule</translation>
+  <translation id="videoOfDay">Videos of the day</translation>
+  <translation id="ourVideos">Our Videos</translation>
+  <translation id="allVideos">All Videos&lt;i class="fa fa-chevron-right" style="background:transparent"&gt;&lt;/i&gt;</translation>
+  <translation id="testimony">Testimony</translation>
+  <translation id="testimonies">Testimonies</translation>
+  <translation id="academicRecord">Academic record</translation>
+  <translation id="profile">Profile</translation>
+  <translation id="myProfile">My Profile</translation>
+  <translation id="downloadReport">Download Report</translation>
+  <translation id="registrationRequest">Registration Request</translation>
+  <translation id="hiringDate">Hiring Date</translation>
+  <translation id="hiringDateRequired">Hiring Date Required</translation>
+  <translation id="position">Position</translation>
+  <translation id="resume">Resume</translation>
+  <translation id="enterNotes">Enter Notes</translation>
+  <translation id="userName">Username</translation>
+  <translation id="sex">Sex</translation>
+  <translation id="course">Course</translation>
+  <translation id="myChildrenRecords">My children's records</translation>
+  <translation id="callUsOn">Call Us On</translation>
+  <translation id="configuration">Configuration</translation>
+  <translation id="sendMePassword">Send me my password</translation>
+
+  
+  
+  <!--  Add adminCalc....html    -->
+  <translation id="schoolYear">School Year</translation>
+  <translation id="schoolYearRequired">School Year Required</translation>
+  <translation id="class">Class</translation>
+  <translation id="classRequired">Class Required</translation>
+  <translation id="monthQuater">Month / Quarter</translation>
+  <translation id="monthQuaterRequired">Month / Quarter Required</translation>
+  <translation id="rank">Rank</translation>
+  <translation id="mark">Mark</translation>
+  <translation id="marks">Marks</translation>
+  <translation id="decision">Decision</translation>
+  <translation id="semester">Semester</translation>
+  <translation id="semesterRequired">Semester Required</translation>
+  
+  <!--  Add Additional Config....html    -->
+  <translation id="inspector">Inspector</translation>
+  <translation id="director">Director</translation>
+  <translation id="baremPrimaire">Primary School Grade Scale</translation>
+  <translation id="baremCollege">Secondary/High School Grade Scale</translation>
+  <translation id="generateMatricule">Automatically Generate Registration number</translation>
+  <translation id="generateRandomPassword">Generate Random Password</translation>  
+  <translation id="showReportHeader">Display Report Header</translation>  
+  <translation id="displayRang">Display Rank on Report cards</translation>  
+  <translation id="showDefaultPassword">Display password on registration sheet</translation>  
+    <translation id="reportHeader">Right section of report header</translation> 
+    <translation id="defaultPassword">Default Password</translation> 
+
+  <!--  Syllabus    -->    
+  <translation id="subject:">Subject</translation>   
+  <translation id="niveau">Level</translation> 
+  <translation id="topic:">Topic</translation> 
+  <translation id="courseTopicRequired">Topic required</translation>  
+  <translation id="schedule">Schedule</translation> 
+  <translation id="slogan">Slogan</translation>         
+</translationbundle>
