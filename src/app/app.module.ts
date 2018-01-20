@@ -10,7 +10,7 @@ import {routes} from './app.routes';
 import {Login} from './components/login';
 
 import {
-  CategoryService
+  FilterService
 } from './services/';
 
 
@@ -26,7 +26,7 @@ import {
     })
   ],
 
-  providers: [CategoryService
+  providers: [FilterService
   ],
 
   bootstrap: [AppComponent]

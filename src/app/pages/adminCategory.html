@@ -19,26 +19,217 @@
 			<!-- <app-admin-menu></app-admin-menu> -->
 			<!--//page-sidebar-->
 			<div class="content-wrapper col-md-10 col-sm-8">
-				<p-tabView> 
+				
 					
-					<p-dataTable [value]="categories" selectionMode="single"
-						[paginator]="true" [rows]="15" [responsive]="true"> <p-column
-						*ngFor="let col of cols" [field]="col.field" [header]="col.header"
-						[sortable]="col.sortable" [filter]="col.filter"> <template
-						*ngIf="col.type === 'string' || col.type === undefined" let-col
-						let-data="rowData" pTemplate type="body"> <span
-						class="col-string">{{ data[ col.field ] }}</span> </template> <template
-						*ngIf="col.type === 'Date'" let-col let-data="rowData" pTemplate
-						type="body"> <span class="col-date">{{ data[
-						col.field ] | date:'dd/MM/yy' }}</span> </template> </p-column> <p-footer>
-						<div class="ui-helper-clearfix" style="width: 100%">
-							<button type="button" pButton icon="fa-plus" style="float: left"
-								(click)="showDialogToAdd()" label="{{ADD_LABEL}}"></button>
+					<div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="displayDialog">
+						<div class="ui-grid-row">
+							<div class="ui-helper-clearfix" style="width: 10%">
+								<button type="button" pButton icon="fa-plus" style="float: left"
+									(click)="toggleTableAndData()" label="{{CANCEL_LABEL}}"></button>
+							</div>
+							<div class="ui-helper-clearfix" style="width: 2%"></div>
+							<div class="ui-helper-clearfix" style="width: 10%">
+								<button type="button" pButton icon="fa-plus" style="float: left"
+									(click)="save()" label="{{SAVE_LABEL}}"></button>
+							</div>
 						</div>
-					</p-footer> </p-dataTable>
-
-				</p-tabView>
-
+						<p></p>
+						<p-tabView> 
+							<p-tabPanel header="General">
+								
+								<p-tabView>
+								  <p-tabPanel *ngFor="let language of languages; let i='index'" [header]="language.name">
+								    <div class="ui-grid-row">
+										<div class="ui-grid-col-4">
+											<label i18n="@@name" for="name">Category Name</label>
+										</div>
+										<div class="ui-grid-col-8">
+											<input pInputText id=top [(ngModel)]="category.categoryDescriptions[i].name" required />
+										</div>
+									</div>
+									<br/>
+									
+									<div class="ui-grid-row">
+										<div class="ui-grid-col-4">
+											<label i18n="@@description" for="description">Description</label>
+										</div>
+										<div class="ui-grid-col-8">
+											<p-editor [(ngModel)]="category.categoryDescriptions[i].description"
+												[style]="{'height':'100px'}" id="description"></p-editor>
+										</div>
+									</div>
+									<br/>
+									
+									<div class="ui-grid-row">
+										<div class="ui-grid-col-4">
+											<label i18n="@@metaTitle" for="metaTitle">Meta Tag Title</label>
+										</div>
+										<div class="ui-grid-col-8">
+											<input pInputText id=top [(ngModel)]="category.categoryDescriptions[i].metaTitle" required />
+										</div>
+									</div>
+									<br/>
+									
+									<div class="ui-grid-row">
+										<div class="ui-grid-col-4">
+											<label i18n="@@metaDescription" for="metaDescription">Meta Tag Description</label>
+										</div>
+										<div class="ui-grid-col-8">
+											<textarea pInputTextarea id="metaDescription" autoResize="autoResize" required
+												[(ngModel)]="category.categoryDescriptions[i].metaDescription" rows="4" pInputTextarea>
+											</textarea>
+										</div>
+									</div>
+									<br/>
+									
+									<div class="ui-grid-row">
+										<div class="ui-grid-col-4">
+											<label i18n="@@metaKeyword" for="metaKeyword">Meta Tag Keyword</label>
+										</div>
+										<div class="ui-grid-col-8">
+											<textarea pInputTextarea id="metaKeyword" autoResize="autoResize" required
+												[(ngModel)]="category.categoryDescriptions[i].metaKeyword" rows="4" pInputTextarea>
+											</textarea>
+										</div>
+									</div>
+									<br/>
+									
+								  </p-tabPanel>
+						
+								</p-tabView>
+								
+							</p-tabPanel>
+							
+							<p-tabPanel header="Data">
+								<div class="ui-grid-row">
+									<div class="ui-grid-col-4">
+										<label i18n="@@parent" for="parent">Parent</label>
+									</div>
+									<div class="ui-grid-col-7">
+										<p-autoComplete [(ngModel)]="category.parent"
+											(onDropdownClick)="categoryDropdown.handleDropdownClick($event)"
+											[suggestions]="categoryDropdown.filteredCategories" [dropdown]="true"
+											id="parent" (completeMethod)="categoryDropdown.filter($event)"
+											name="parent" field="displayName" [size]="30" placeholder="Parent"
+											[minLength]="1" #parent="ngModel" required></p-autoComplete>
+										<div [hidden]="parent.valid || parent.pristine"
+											class="alert alert-danger" i18n="@@parentRequired">Parent Required</div>
+									</div>
+									<div class="ui-grid-col-1"></div>
+								</div>	
+								<br/>
+								
+								<div class="ui-grid-row">
+									<div class="ui-grid-col-4">
+										<label i18n="@@filters" for="filters">Filters</label>
+									</div>
+									<div class="ui-grid-col-8">
+										<p-pickList [source]="filters" [target]="selectedFilters" sourceHeader="Available" 
+												targetHeader="Selected" [responsive]="true" filterBy="name" 
+										        dragdrop="true" sourceFilterPlaceholder="Search by name" 
+										        targetFilterPlaceholder="Search by name" [sourceStyle]="{'height':'300px'}" 
+										        [targetStyle]="{'height':'300px'}">
+										    <ng-template let-filter pTemplate="item">
+												<div class="ui-helper-clearfix">
+													<div>{{filter.displayName}}</div>
+												</div>
+											</ng-template>
+										</p-pickList>
+									</div>
+							
+								</div>
+								<br/>
+								
+								<div class="ui-grid-row">
+									<div class="ui-grid-col-5">
+										<label i18n="@@stores" for="stores">Stores</label>
+									</div>
+									<div class="ui-grid-col-7">
+										<p-checkbox *ngFor="let store of stores let i='index'" 
+											[(ngModel)]="selectedStores" id="stores" name="stores" 
+											value="{{store.id}}" label="{{store.name}}" >
+										</p-checkbox>
+									</div>
+									<div class="ui-grid-col-1"></div>
+								</div>
+								<br/>
+								
+								<div class="ui-grid-row">
+									<div class="ui-grid-col-4">
+										<label i18n="@@top" for="top">Top</label>
+									</div>
+									<div class="ui-grid-col-8">
+										<input pInputText id=top [(ngModel)]="category.top" required />
+									</div>
+								</div>
+								<br/>
+								<div class="ui-grid-row">
+									<div class="ui-grid-col-4">
+										<label i18n="@@columns" for="columns">Columns</label>
+									</div>
+									<div class="ui-grid-col-8">
+										<input pInputText id=columns [(ngModel)]="category.column" required />
+									</div>
+								</div>
+								<br/>
+								<div class="ui-grid-row">
+									<div class="ui-grid-col-4">
+										<label i18n="@@sortOrder" for="sortOrder">Sort Order</label>
+									</div>
+									<div class="ui-grid-col-8">
+										<input pInputText id=sortOrder [(ngModel)]="category.sortOrder" required />
+									</div>
+								</div>
+								<br/>
+								<div class="ui-grid-row">
+									<div class="ui-grid-col-4">
+										<label i18n="@@status" for="status">Status</label>
+									</div>
+									<div class="ui-grid-col-8">
+										<input pInputText id=status [(ngModel)]="category.status" required />
+									</div>
+								</div>
+							</p-tabPanel>
+						</p-tabView>
+					</div>
+					
+					<div class="ui-helper-clearfix" style="width: 100%">
+						<button type="button" pButton icon="fa-plus" style="float: left"
+							(click)="addNew()" label="{{ADD_LABEL}}">
+						</button>
+						<button type="button" pButton icon="fa-plus" style="float: left"
+							(click)="getAll()" label="{{REFRESH_LABEL}}">
+						</button>
+						<button type="button" pButton icon="fa-minus" style="float: left"
+							(click)="delete()" label="{{DELETE_LABEL}}">
+						</button>
+					</div>
+					<p-dataTable [value]="categories" [(hidden)]="displayTable" [(selection)]="selectedCategories"
+						[paginator]="true" [rows]="25" [responsive]="true"> 
+						<p-header>List of Categories</p-header>
+						<p-column selectionMode="multiple"></p-column>
+						<p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"
+							[sortable]="col.sortable" [filter]="col.filter"> 
+							<ng-template *ngIf="col.type === 'string' || col.type === undefined" let-col
+									let-data="rowData" pTemplate type="body"> <span
+									class="col-string">{{ data[ col.field ] }}</span> 
+							</ng-template> 
+							<ng-template *ngIf="col.type === 'Date'" let-col let-data="rowData" pTemplate
+									type="body"> <span class="col-date">{{ data[
+									col.field ] | date:'dd/MM/yy' }}</span> 
+							</ng-template> 
+						</p-column>
+						<p-column [style]="{'width':'40%'}"> 
+							<ng-template let-col let-category="rowData" pTemplate="body">
+								<button type="button" pButton icon="fa-check" style="float: left"
+									(click)="edit(category.id)" label="{{DETAIL}}">
+								</button>
+							</ng-template> 
+						</p-column>
+						<p-footer>
+							
+						</p-footer> 
+					</p-dataTable>
 			</div>
 			<!--//content-wrapper-->
 		</div>

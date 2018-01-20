@@ -11,6 +11,8 @@ export class Constants {
   public static saveFailed: string = "La sauvegarde n'a pas marche. Verifiez tous les champs.";
   public static deleteFailed: string = "La supression n'a pas marche. Reessayez.";
   public static ADD_LABEL: string = "Ajouter";
+  public static REFRESH_LABEL: string = "Rafraichir";
+  public static CANCEL_LABEL: string = "Annuler";
     public static SEARCH_WEBSITE: string = "Rechercher sur le site...";
     public static LOGOUT = "Deconnecter ";
 }

@@ -8,7 +8,7 @@ export class CategoryDescription {
   metaTitle: string;
   metaDescription: string;
   metaKeyword: string;
-  language: Language;
+  language: Language = new Language();
   category: Category;
   categoryId: number;
   languageId: number;
